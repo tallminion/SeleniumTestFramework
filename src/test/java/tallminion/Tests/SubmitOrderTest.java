@@ -3,26 +3,24 @@ package tallminion.Tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+import tallminion.TestComponents.BaseTest;
 import tallminion.pageObjects.LandingPage;
 import tallminion.pageObjects.MyCart;
 import tallminion.pageObjects.PaymentPage;
 import tallminion.pageObjects.ProductCatalogue;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import static java.time.Duration.ofSeconds;
 
-public class SubmitOrderTest {
-    public static void main(String[] args) throws InterruptedException {
+public class SubmitOrderTest extends BaseTest {
+   @Test
+    public void submitOrder() throws IOException {
         String productName = "BANARSI SAREE";
-        WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.manage().timeouts().implicitlyWait(ofSeconds(10));
-        driver.manage().window().maximize();
 
-//      landing page
-        LandingPage landingpage = new LandingPage(driver);
-        landingpage.goTo();
+        LandingPage landingpage = launchApplication();
         landingpage.loginApplication("sagartest1109@gmail.com", "Password123");
 
 //      Product catalogue
