@@ -20,7 +20,6 @@ public class SubmitOrderTest extends BaseTest {
     public void submitOrder() throws IOException {
         String productName = "BANARSI SAREE";
 
-        LandingPage landingpage = launchApplication();
         landingpage.loginApplication("sagartest1109@gmail.com", "Password123");
 
 //      Product catalogue
