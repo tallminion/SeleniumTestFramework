@@ -6,7 +6,7 @@ import tallminion.TestComponents.BaseTest;
 
 import java.io.IOException;
 
-public class ErrorValidation extends BaseTest {
+public class ErrorValidationTest extends BaseTest {
    @Test
     public void submitOrder() throws IOException {
         String productName = "BANARSI SAREE";
