@@ -35,7 +35,5 @@ public class SubmitOrderTest extends BaseTest {
         PaymentPage paymentPage = new PaymentPage(driver);
         paymentPage.setCountryAndPlaceOrder();
 
-        driver.quit();
-
     }
 }
